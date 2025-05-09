@@ -178,6 +178,8 @@
 .info {
   flex: 1;
   display: flex;
+  /* Allow content to wrap on smaller screens */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -243,5 +245,29 @@
   .sort-link:hover,
   .sort-link.active {
     color: var(--uchu-yellow);
+  }
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .attendee-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .rank {
+    margin-bottom: 4px;
+  }
+
+  .info {
+    width: 100%; /* Allow info section to take full width */
+    gap: 4px; /* Reduce gap when wrapped */
+  }
+
+  .time {
+    margin-left: 0;
+    width: 100%; /* Allow time section to take full width */
+    text-align: left; /* Align time to the left below name */
   }
 } 

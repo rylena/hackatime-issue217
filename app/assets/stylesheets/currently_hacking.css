@@ -100,4 +100,16 @@
   .currently-hacking-header {
     color: white;
   }
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .currently-hacking-container {
+    position: static; /* Change position to static */
+    max-width: 100%; /* Allow container to take full width */
+    right: auto; /* Remove right positioning */
+    margin: 1rem auto; /* Add margin for spacing and center */
+    border-radius: 8px; /* Ensure consistent border-radius */
+    max-height: none; /* Remove max height constraint */
+  }
 } 
